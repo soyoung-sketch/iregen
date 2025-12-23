@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>장보고식자재마트 - 반야월점</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 360px;
+      background-color: white;
+      min-height: 100vh;
+      position: relative;
+      padding-bottom: 100px;
+    }
+
+    /* 상단 배너 */
+    .top-banner {
+      background-color: #e76325;
+      padding: 12px 10px;
+      text-align: center;
+    }
+
+    .top-banner p {
+      color: white;
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .top-banner .highlight {
+      color: #faff63;
+    }
+
+    /* 히어로 이미지 */
+    .hero-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* 메인 콘텐츠 */
+    .main-content {
+      padding: 30px 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* 마트 이름 */
+    .mart-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: #333;
+      letter-spacing: -1px;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    /* 지점 배지 */
+    .branch-badge {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+      width: 100%;
+    }
+
+    .branch-badge span {
+      background-color: #fdaf07;
+      padding: 5px 20px;
+      border-radius: 15px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #333;
+      letter-spacing: -1px;
+    }
+
+    /* 안내 메시지 */
+    .notice-box {
+      background-color: #fef1e2;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-align: center;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    .notice-box p {
+      font-size: 14.6px;
+      font-weight: 700;
+      color: #7a7b7c;
+      letter-spacing: -1px;
+    }
+
+    .notice-box .highlight {
+      color: #f88736;
+    }
+
+    /* 정보 목록 */
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+      padding-left: 10px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .info-label {
+      display: flex;
+      align-items: center;
+      width: 115px;
+      flex-shrink: 0;
+    }
+
+    .info-label::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      background-color: #333;
+      margin-right: 6px;
+      flex-shrink: 0;
+    }
+
+    .info-label span {
+      font-size: 20px;
+      font-weight: 700;
+      color: #333;
+      letter-spacing: -1px;
+    }
+
+    .info-label.short {
+      width: auto;
+      margin-right: 8px;
+    }
+
+    .info-value {
+      font-size: 20px;
+      letter-spacing: -1px;
+    }
+
+    .info-value.phone {
+      font-weight: 700;
+      color: #f88736;
+      font-size: 26px;
+    }
+
+    .info-value.normal {
+      font-weight: 350;
+      color: #6a6b6c;
+    }
+
+    /* 바로가기 버튼 */
+    .button-wrapper {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 360px;
+      padding: 20px 10px;
+      background-color: white;
+    }
+
+    .cta-button {
+      display: block;
+      width: 100%;
+      background-color: #f89736;
+      color: #f8fafc;
+      text-align: center;
+      padding: 16px 20px 11px;
+      border-radius: 50px;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -2px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #e8862a;
+    }
+
+    .cta-button:active {
+      background-color: #d77620;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 상단 배너 -->
+    <div class="top-banner">
+      <p>세상에 모든 <span class="highlight">식자재</span>가 여기에~!</p>
+    </div>
+
+    <!-- 히어로 이미지 -->
+    <img src="IMG01.png" alt="장보고식자재마트 신선한 과일과 채소" class="hero-image">
+
+    <!-- 메인 콘텐츠 -->
+    <div class="main-content">
+      <!-- 마트 이름 -->
+      <h1 class="mart-title">장보고식자재마트</h1>
+
+      <!-- 지점 배지 -->
+      <div class="branch-badge">
+        <span>반야월점</span>
+      </div>
+
+      <!-- 안내 메시지 -->
+      <div class="notice-box">
+        <p>행사상품 확인은 <span class="highlight">"바로가기"</span>를 눌러주세요</p>
+      </div>
+
+      <!-- 정보 목록 -->
+      <div class="info-list">
+        <div class="info-item">
+          <div class="info-label">
+            <span>전화번호 :</span>
+          </div>
+          <span class="info-value phone">053-961-1401</span>
+        </div>
+
+        <div class="info-item">
+          <div class="info-label">
+            <span>운영시간 :</span>
+          </div>
+          <span class="info-value normal">08:00 ~ 22:00</span>
+        </div>
+
+        <div class="info-item">
+          <div class="info-label short">
+            <span>주소 :</span>
+          </div>
+          <span class="info-value normal">대구 동구 안심로53길 12</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 바로가기 버튼 -->
+    <div class="button-wrapper">
+      <a href="#" class="cta-button">바로가기</a>
+    </div>
+  </div>
+</body>
+</html>
